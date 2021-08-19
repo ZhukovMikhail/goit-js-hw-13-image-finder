@@ -10,11 +10,22 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="dist/basicLightbox.min.css" />
   </head>
   <body>
     <section>
       <h1>Seach a picture</h1>
-      <input type="text" class="input" />
+      <form class="search-form" id="search-form">
+        <input
+          class="input"
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+      </form>
+
       <button type="submit" class="submit_btn">Submit</button>
       <button type="submit" class="download-more_btn">Download more</button>
       <div class="renderBox"></div>
@@ -22,5 +33,6 @@
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script src="dist/basicLightbox.min.js"></script>
   </body>
 </html>
