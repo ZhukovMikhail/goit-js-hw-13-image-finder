@@ -2,14 +2,9 @@ import './sass/main.scss';
 import fetchImage from './apiService';
 
 import cardsListMarkup from './imageList.hbs';
-const basicLightbox = require('basiclightbox');
-// import cardMarkup from './imageCardTmpl.hbs';
-const instance = basicLightbox.create(`
-	<h1>Dynamic Content</h1>
-	<p>You can set the content of the lightbox with JS.</p>
-`);
 
-// fetchImage();
+// import cardMarkup from './imageCardTmpl.hbs';
+
 const refs = {
   input: document.querySelector('.input'),
   submitBtn: document.querySelector('.submit_btn'),
