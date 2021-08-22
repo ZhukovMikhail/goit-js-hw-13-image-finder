@@ -16,12 +16,17 @@
 }
 .title{
 text-align: center;
+color: var(--accent-color);
 }
 .search-form {
   display: flex;
   flex-direction: column;
   width: 500px;
   margin: 0 auto;
+}
+.input{
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .renderBox{
