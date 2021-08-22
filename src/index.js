@@ -26,9 +26,6 @@ async function onSubmitBtn(e) {
   fetchImage.resetPage();
   const data = await fetchImage.fethArticles();
   refs.gallery.innerHTML = cardsListMarkup(data.hits);
-  //   .then(data => {
-  //
-  // });
 }
 async function onDownloadMoreBtn(e) {
   e.preventDefault();
