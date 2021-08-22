@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  max-width: 100vw;
 }
 .header {
   position: fixed;
@@ -26,34 +26,36 @@ text-align: center;
 
 .renderBox{
   margin-top: 150px;
-  align-content: center;
-  width: 100%;
-  padding: 10px;
-  // margin-left: auto;
-  // margin-right: auto;
+//  
+  min-width: 100vw;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
  .gallery {
+   justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -15px;
-    margin-left: -15px;
-    width: 100%;
+    margin-top: -10px;
+    margin-left: -10px;
+  
     &__item {
-      border-radius: 5%;
-      margin-top: 15px;
-      margin-left: 15px;
-      flex-basis: calc( 100%/3  - 15px);
+      border-radius: 7px;
+      margin-top: 10px;
+      margin-left: 10px;
+      flex-basis: calc((100% - 30px) / 3);
         &:hover,
         &:focus {
          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
         }
-            
     }
   }
   .photo-card{
+     min-width: 100%;
     &__image{
-      border-radius: 5%;
+      min-width: 100%;
+      border-radius: 7px;
   }
 }
   .stats{
