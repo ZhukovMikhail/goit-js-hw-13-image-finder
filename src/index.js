@@ -1,8 +1,16 @@
 import './sass/main.scss';
+import * as basicLightbox from 'basiclightbox';
 import fetchImageApi from './apiService';
 import cardsListMarkup from './imageList.hbs';
-const fetchImage = new fetchImageApi();
 // import cardMarkup from './imageCardTmpl.hbs';
+// import openModalHandler from './app';
+// import closeModalHandler from './app';
+// import altModalCloseHandler from './app';
+// import escapeHanler from './app';
+// import leftKeyHandler from './app';
+// import rightKeyHandler from './app';
+
+const fetchImage = new fetchImageApi();
 const refs = {
   searchForm: document.getElementById('search-form'),
   submitBtn: document.querySelector('.submit_btn'),
@@ -35,18 +43,15 @@ function onDownloadMoreBtn(e) {
     block: 'end',
   });
 }
-import * as basicLightbox from 'basiclightbox';
+
+// refs.renderBox.addEventListener('click', onRenderBoxClick);
 
 const instance = basicLightbox.create(
   `
-    <div class="modal">
-        <p>
-            Your first lightbox with just a few lines of code.
-            Yes, it's really that simple.
-        </p>
-    </div>
-`,
+  <div class="modal">
+  <H1>Привет</H1>
+  </div>
+  `,
 );
-// refs.renderBox.addEventListener('click', onRenderClick);
-// functiononRenderClick
+
 instance.show();
