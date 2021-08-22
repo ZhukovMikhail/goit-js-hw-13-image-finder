@@ -20,23 +20,23 @@ const refs = {
 };
 refs.searchForm.addEventListener('submit', onSubmitBtn);
 refs.downloadMoreBtn.addEventListener('click', onDownloadMoreBtn);
-
-function onSubmitBtn(e) {
+async function onSubmitBtn(e) {
   e.preventDefault();
-  fetchImage.query = e.currentTarget.elements.query.value;
-  fetchImage.perPage = 12;
-  this.pageNumber = 1;
-  fetchImage.fethArticles().then(data => {
-    refs.gallery.innerHTML = cardsListMarkup(data.hits);
-  });
+  fetchImage.query = e.currentTarget.elements.query.value.trim();
+  fetchImage.resetPage();
+  const data = await fetchImage.fethArticles();
+  refs.gallery.innerHTML = cardsListMarkup(data.hits);
+  //   .then(data => {
+  //
+  // });
 }
-function onDownloadMoreBtn(e) {
+async function onDownloadMoreBtn(e) {
   e.preventDefault();
 
-  fetchImage.page();
-  fetchImage.fethArticles().then(data => {
-    refs.gallery.insertAdjacentHTML('beforeend', cardsListMarkup(data.hits));
-  });
+  const data = await fetchImage.fethArticles();
+  refs.gallery.insertAdjacentHTML('beforeend', cardsListMarkup(data.hits));
+  fetchImage.nextPage();
+
   refs.gallery.scrollIntoView({
     behavior: 'smooth',
     block: 'end',

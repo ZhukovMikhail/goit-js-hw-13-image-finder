@@ -1,16 +1,22 @@
 // export default function fetchImage(searhcQuerry, pageNumber, perPageNumber) {
-export default class fetchImage {
+export default class FetchImage {
   constructor() {
     this.searhcQuery = '';
     this.pageNumber = 1;
     this.perPage = 12;
   }
-  fethArticles() {
+  async fethArticles() {
     const USER_KEY = '22985243-b477986a48324befacd1d8a65';
     const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searhcQuery}&page=${this.pageNumber}&per_page=${this.perPage}&key=${USER_KEY}`;
-    return fetch(url)
-      .then(response => response.json())
-      .catch(error => console.log(error));
+    const response = await fetch(url);
+    try {
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.log(error.message);
+    }
+    // .then(response => response.json())
+    // .catch(error => console.log(error));
   }
   get query() {
     return this.searhcQuery;
@@ -21,7 +27,11 @@ export default class fetchImage {
   pageLim() {
     this.perPage += 12;
   }
-  page() {
+  nextPage() {
     this.pageNumber += 1;
+  }
+  resetPage() {
+    this.perPage = 12;
+    this.pageNumber = 1;
   }
 }
