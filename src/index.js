@@ -26,7 +26,6 @@ function onSubmitBtn(e) {
   fetchImage.query = e.currentTarget.elements.query.value;
   fetchImage.perPage = 12;
   this.pageNumber = 1;
-  // console.log(searhcQuery);
   fetchImage.fethArticles().then(data => {
     refs.gallery.innerHTML = cardsListMarkup(data.hits);
   });
@@ -46,12 +45,6 @@ function onDownloadMoreBtn(e) {
 
 // refs.renderBox.addEventListener('click', onRenderBoxClick);
 
-const instance = basicLightbox.create(
-  `
-  <div class="modal">
-  <H1>Привет</H1>
-  </div>
-  `,
-);
+// const instance = basicLightbox.create(cardMarkup(data.hits));
 
-instance.show();
+// instance.show();

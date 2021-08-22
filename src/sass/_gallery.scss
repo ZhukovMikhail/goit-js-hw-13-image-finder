@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
 }
 .header {
   position: fixed;
@@ -27,7 +27,7 @@ text-align: center;
 .renderBox{
   margin-top: 150px;
   align-content: center;
-  width: 2000px;
+  width: 100%;
   padding: 10px;
   // margin-left: auto;
   // margin-right: auto;
@@ -37,21 +37,25 @@ text-align: center;
     flex-wrap: wrap;
     margin-top: -15px;
     margin-left: -15px;
+    width: 100%;
     &__item {
       border-radius: 5%;
       margin-top: 15px;
       margin-left: 15px;
-      flex-basis: calc( 100%  - 45px)/ 3;
+      flex-basis: calc( 100%/3  - 15px);
         &:hover,
         &:focus {
          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
         }
-            &-card{
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            border-radius: 5%;
-            }
+            
     }
+  }
+  .photo-card{
+    &__image{
+      border-radius: 5%;
+  }
+}
+  .stats{
+    display: flex;
   }

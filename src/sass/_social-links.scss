@@ -1,0 +1,29 @@
+.stats{
+  padding: 5px;
+    &-item{
+    display: flex;
+    justify-content: center;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 5px;
+}
+}
+    .material-icons {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--icons-color);
+    transition: var(--transition-hover-focus);
+     width: 30x;
+    height: 30x;
+    color: #afb1b8;
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      color: #ffffff;
+      outline: none;
+    }
+  }
