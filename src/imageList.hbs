@@ -1,8 +1,6 @@
-<ul class='gallery'>
-  <!-- Список <li> с карточками изображений -->
-  {{#each this}}
-    <li>
-      <img src={{webformatURL}} alt={{id}} />
-    </li>
-  {{/each}}
-</ul>
+<!-- Список <li> с карточками изображений -->
+{{#each this}}
+  <li class='gallery__item'>
+    <img class='gallery__item-card' src={{webformatURL}} alt={{id}} />
+  </li>
+{{/each}}

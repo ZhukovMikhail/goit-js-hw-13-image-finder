@@ -12,20 +12,24 @@
     />
   </head>
   <body>
-    <section>
-      <h1>Seach a picture</h1>
-      <form class="search-form" id="search-form">
-        <input
-          class="input"
-          type="text"
-          name="query"
-          autocomplete="off"
-          placeholder="Search images..."
-        />
-      </form>
-      <button type="submit" class="submit_btn">Submit</button>
-      <button type="submit" class="download-more_btn">Download more</button>
-      <div class="renderBox"></div>
+    <section class="section">
+      <div class="header">
+        <h1 class="title">Seach a picture</h1>
+        <form class="search-form" id="search-form">
+          <input
+            class="input"
+            type="text"
+            name="query"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+          <button type="submit" class="submit_btn button">Submit</button>
+          <button type="submit" class="download-more_btn button">Download more</button>
+        </form>
+      </div>
+      <div class="renderBox">
+        <ul class="gallery"></ul>
+      </div>
     </section>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->

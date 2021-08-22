@@ -1,0 +1,35 @@
+.button {
+  min-width: 200px;
+  height: 30px;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+  border-style: hidden;
+
+  transition: var(--transition-hover-focus);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    color: #ffffffee;
+    background: var(--hover-btn-color);
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: #fff;
+  }
+}
