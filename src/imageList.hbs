@@ -1,8 +1,13 @@
 {{#each this}}
   <li class='gallery__item list'>
     <div class='photo-card'>
-      <img class='photo-card__image' src={{webformatURL}} alt={{id}} />
-
+      <img
+        class='photo-card__image'
+        {{! loading='lazy' }}
+        src={{webformatURL}}
+        data-src={{largeImageURL}}
+        alt={{id}}
+      />
       <div class='stats'>
         <p class='stats-item'>
           <i class='material-icons'>thumb_up</i>
