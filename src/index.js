@@ -1,9 +1,9 @@
 import './sass/main.scss';
 import cardsListMarkup from './templates/imageList.hbs';
 import refs from './js/refs';
-import onImageClick from './js/onImageClick';
+import onImgClickShowBigImg from './js/onImageClick';
 //==================== event Listeners ===================
-refs.renderBox.addEventListener('click', onImageClick);
+refs.renderBox.addEventListener('click', onImgClickShowBigImg);
 refs.searchForm.addEventListener('submit', onSubmitBtn);
 refs.loadMoreBtn.refs.button.addEventListener('click', onLoadMoreBtn);
 //========================================================
@@ -20,7 +20,6 @@ async function onSubmitBtn(e) {
 
   if (refs.fetchImage.query === '' || refs.fetchImage.query === null) {
     refs.noticeMessage.notice();
-    refs.loadMoreBtn.disable();
     refs.loadMoreBtn.loaded();
     return;
   }
