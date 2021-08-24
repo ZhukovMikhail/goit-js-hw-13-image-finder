@@ -1,8 +1,10 @@
 .stats{
+  display: flex;
+  justify-content:center;
   padding: 5px;
     &-item{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     padding-left: 32px;
     padding-right: 32px;
     margin-top: 5px;
@@ -20,6 +22,7 @@
      width: 30x;
     height: 30x;
     color: #afb1b8;
+    cursor: pointer;
     &:hover,
     &:focus {
       background-color: var(--accent-color);
@@ -27,3 +30,6 @@
       outline: none;
     }
   }
+.text-modal {
+  color: #fff;
+}
