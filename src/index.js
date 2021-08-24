@@ -1,7 +1,7 @@
 import './sass/main.scss';
-import * as basicLightbox from 'basiclightbox';
 import cardsListMarkup from './templates/imageList.hbs';
 import refs from './js/refs';
+import onImageClick from './js/onImageClick';
 //==================== event Listeners ===================
 refs.renderBox.addEventListener('click', onImageClick);
 refs.searchForm.addEventListener('submit', onSubmitBtn);
@@ -58,16 +58,5 @@ async function onLoadMoreBtn(e) {
     behavior: 'smooth',
     block: 'end',
   });
-}
-//========================================================
-//================== Show Modal Image Function ===============
-function onImageClick(e) {
-  const dataSrc = e.target.dataset.src;
-
-  if (e.target.nodeName !== 'IMG') {
-    return;
-  }
-  const instance = basicLightbox.create(`<img src="${dataSrc}" width="800" height="600">`);
-  instance.show();
 }
 //========================================================
