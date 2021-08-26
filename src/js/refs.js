@@ -3,6 +3,7 @@ import NoticeMessage from '../js/notice';
 import LoadMoreBtn from '../js/loadMoreBtn';
 
 const searchForm = document.getElementById('search-form');
+const divForScrollFetch = document.querySelector('.empty-div-for-scrollfetch');
 const submitBtn = document.querySelector('.submit_btn');
 const renderBox = document.querySelector('.renderBox');
 const gallery = document.querySelector('.gallery');
@@ -20,4 +21,5 @@ export default {
   noticeMessage,
   fetchImage,
   loadMoreBtn,
+  divForScrollFetch,
 };

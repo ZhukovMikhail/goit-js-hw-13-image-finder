@@ -8,15 +8,15 @@ export default class FetchImage {
   async fethArticles() {
     const USER_KEY = '22985243-b477986a48324befacd1d8a65';
     const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searhcQuery}&page=${this.pageNumber}&per_page=${this.perPage}&key=${USER_KEY}`;
-    const response = await fetch(url);
     try {
+      const response = await fetch(url);
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log(error.message);
+      {
+        throw error;
+      }
     }
-    // .then(response => response.json())
-    // .catch(error => console.log(error));
   }
   get query() {
     return this.searhcQuery;

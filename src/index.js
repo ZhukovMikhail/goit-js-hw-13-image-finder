@@ -2,6 +2,7 @@ import './sass/main.scss';
 import cardsListMarkup from './templates/imageList.hbs';
 import refs from './js/refs';
 import onImgClickShowBigImg from './js/onImgClickShowModalCard';
+import infinityScroll from './js/intersectionObserver';
 //==================== event Listeners ===================
 refs.renderBox.addEventListener('click', onImgClickShowBigImg);
 refs.searchForm.addEventListener('submit', onSubmitBtn);
@@ -40,10 +41,12 @@ async function onSubmitBtn(e) {
       refs.loadMoreBtn.disable();
       refs.loadMoreBtn.loaded();
     }, 110);
-    fetchImage.resetPage();
+
+    refs.fetchImage.resetPage();
     return;
   }
   refs.gallery.innerHTML = cardsListMarkup(data.hits);
+  infinityScroll();
 }
 //========================================================
 //================== load More Button Function ===============
@@ -61,5 +64,6 @@ async function onLoadMoreBtn(e) {
     behavior: 'smooth',
     block: 'end',
   });
+  infinityScroll();
 }
 //========================================================
