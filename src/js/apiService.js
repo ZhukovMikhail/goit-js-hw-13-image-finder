@@ -6,6 +6,11 @@ export default class FetchImage {
     this.perPage = 12;
   }
   async fethArticles() {
+    // const searchParam = new URLSearchParams {
+    //   q: this.searhcQuery,
+    //   language: en,
+    //   page: this.page
+    // }
     const USER_KEY = '22985243-b477986a48324befacd1d8a65';
     const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searhcQuery}&page=${this.pageNumber}&per_page=${this.perPage}&key=${USER_KEY}`;
     try {
